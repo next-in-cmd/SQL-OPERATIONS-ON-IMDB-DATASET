@@ -8,7 +8,7 @@ Performed SQL operation on the IMDB dataset for practicing SQL query operations 
                        
 **2.LIMIT:** The LIMIT clause in SQL is used to specify the maximum number of rows to be returned in the result set of a query. 
 
-                    SELECT name.year FROM movies LIMIT 20;
+                    SELECT name,year FROM movies LIMIT 20;
                      
 **OFFSET:** The OFFSET clause in SQL is used to specify the number of rows to skip before starting to return rows from a query.
 
