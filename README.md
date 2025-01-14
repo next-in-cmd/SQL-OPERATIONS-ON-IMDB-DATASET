@@ -25,4 +25,21 @@ Here in order by clause 'ASC' is by default used by query optimiser if 'DESC' is
               set are eliminated, leaving only distinct rows. 
               
                     SELECT DISTINCT genre FROM movies_genres; 
-                    SELECT DISTINCT first_name,last_name FROM directors ORDER BY first_name; 
+                    SELECT DISTINCT first_name,last_name FROM directors ORDER BY first_name;  
+**WHERE:** WHERE clause is used to filter records in a query based on specific conditions. It is typically used in SELECT, UPDATE, DELETE, and INSERT statements to specify which rows should be affected by the query. 
+
+                    SELECT name,year,rankscore FROM movies WHERE rankscore>9; 
+                    SELECT name,year,rankscore FROM movies WHERE rankscore>9 ORDER BY rankscore DESC LIMIT 20; 
+
+WHERE clause is consist of Comparison operator like =, <>, !=, >, <, >=, <=. 
+# NULL defines does not exist/missing/unknown 
+'=' does not work with NULL operations. 
+
+                    SELECT name,year,rankscore FROM movies WHERE rankscore = NULL; 
+                    
+TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used. 
+
+                    SELECT name,year,rankscore FROM movies WHERE rankscore IS NULL LIMIT 20; 
+                    
+                    
+                  
