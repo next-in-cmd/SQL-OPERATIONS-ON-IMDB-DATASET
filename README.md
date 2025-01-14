@@ -1,12 +1,12 @@
 # SQL-OPERATIONS-ON-IMDB-DATASET 
 Performed SQL operation on the IMDB dataset for practicing SQL query operations and building database-driven applications. It represents a structured collection of data about movies, actors, directors, ratings, and other related information.
 
-**1. SELECT QUERY:** A SELECT query in SQL is a command used to retrieve data from one or more tables in a database. 
+** SELECT QUERY:** A SELECT query in SQL is a command used to retrieve data from one or more tables in a database. 
 
                     SELECT * FROM movies; '*' defines that set of all rows with column names. 
                     SELECT name,rankscore FROM movies; 
                        
-**2.LIMIT:** The LIMIT clause in SQL is used to specify the maximum number of rows to be returned in the result set of a query. 
+**LIMIT:** The LIMIT clause in SQL is used to specify the maximum number of rows to be returned in the result set of a query. 
 
                     SELECT name,year FROM movies LIMIT 20;
                      
