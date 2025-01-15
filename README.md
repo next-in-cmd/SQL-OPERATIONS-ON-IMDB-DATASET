@@ -49,5 +49,10 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                     SELECT name,year,rankscore FROM movies WHERE year BETWEEN year>=1999 AND year<=2000; // BETWEEN 
                     SELECT director_id,genre FROM directors_genres WHERE genre IN('Comedy','Horror'); // IN 
                     SELECT name,year,rankscore FROM movies WHERE name LIKE 'Tis%'; // like , %-Wildcard character  
+#AGGREGATE FUNCTIONS
 
+                    SELECT year, COUNT(year) FROM movies; 
+                    SELECT year, COUNT(year) FROM movies WHERE year>=2000; 
+                    SELECT year, MIN(year) FROM movies; 
+                    SELECT year, MAX(year) FROM movies;
                   
