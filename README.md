@@ -41,7 +41,7 @@ WHERE clause is consist of Comparison operator like =, <>, !=, >, <, >=, <=.
 TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used. 
 
                     SELECT name,year,rankscore FROM movies WHERE rankscore IS NULL LIMIT 20; 
-#LOGICAL OPERATIONS ON WHERE CLAUSE QUERIES  
+**LOGICAL OPERATIONS ON WHERE CLAUSE QUERIES:**  
 
                     SELECT name,year,rankscore FROM movies WHERE year>=1999 AND year<=2000; // AND 
                     SELECT name,year,rankscore FROM movies WHERE NOT year<=2000;  // NOT
@@ -49,7 +49,7 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                     SELECT name,year,rankscore FROM movies WHERE year BETWEEN year>=1999 AND year<=2000; // BETWEEN 
                     SELECT director_id,genre FROM directors_genres WHERE genre IN('Comedy','Horror'); // IN 
                     SELECT name,year,rankscore FROM movies WHERE name LIKE 'Tis%'; // like , %-Wildcard character  
-#AGGREGATE FUNCTIONS
+ **AGGREGATE FUNCTIONS:**
 
                     SELECT year, COUNT(year) FROM movies; 
                     SELECT year, COUNT(year) FROM movies WHERE year>=2000; 
@@ -57,7 +57,7 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                     SELECT year, MAX(year) FROM movies; 
 
 
-#GROUP BY 
+ **GROUP BY:** 
 
                    SELECT year, COUNT(year) FROM movies GROUP BY year; 
                    SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year; 
