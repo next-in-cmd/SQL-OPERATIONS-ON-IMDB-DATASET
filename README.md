@@ -54,5 +54,12 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                     SELECT year, COUNT(year) FROM movies; 
                     SELECT year, COUNT(year) FROM movies WHERE year>=2000; 
                     SELECT year, MIN(year) FROM movies; 
-                    SELECT year, MAX(year) FROM movies;
+                    SELECT year, MAX(year) FROM movies; 
+
+
+#GROUP BY 
+
+                   SELECT year, COUNT(year) FROM movies GROUP BY year; 
+                   SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year; 
+                   SELECT YEAR, COUNT(year) year_count FROM movies GROUP BY year ORDER BY year_count; 
                   
