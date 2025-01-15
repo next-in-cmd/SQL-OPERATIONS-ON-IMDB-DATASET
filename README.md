@@ -41,6 +41,13 @@ WHERE clause is consist of Comparison operator like =, <>, !=, >, <, >=, <=.
 TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used. 
 
                     SELECT name,year,rankscore FROM movies WHERE rankscore IS NULL LIMIT 20; 
-                    
-                    
+#LOGICAL OPERATIONS ON WHERE CLAUSE QUERIES  
+
+                    SELECT name,year,rankscore FROM movies WHERE year>=1999 AND year<=2000; // AND 
+                    SELECT name,year,rankscore FROM movies WHERE NOT year<=2000;  // NOT
+                    SELECT name,year FROM movies WHERE rankscore>9 OR year>=2000;  // OR 
+                    SELECT name,year,rankscore FROM movies WHERE year BETWEEN year>=1999 AND year<=2000; // BETWEEN 
+                    SELECT director_id,genre FROM directors_genres WHERE genre IN('Comedy','Horror'); // IN 
+                    SELECT name,year,rankscore FROM movies WHERE name LIKE 'Tis%'; // like , %-Wildcard character  
+
                   
