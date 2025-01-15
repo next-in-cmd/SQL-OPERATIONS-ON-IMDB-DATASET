@@ -20,13 +20,13 @@ SELECT name,year FROM movies ORDER BY year DESC LIMIT 20;
 SELECT DISTINCT genre FROM movies_genres; 
 SELECT DISTINCT first_name,last_name FROM directors ORDER BY first_name;
 *********************************************************************************************************************************************************************************
-#WHERE CLAUSES 
+# WHERE CLAUSES 
 SELECT name,year,rankscore FROM movies WHERE rankscore>9; 
 SELECT name,year,rankscore FROM movies WHERE rankscore>9 ORDER BY rankscore DESC LIMIT 20;
  SELECT name,year,rankscore FROM movies WHERE rankscore IS NULL LIMIT 20; 
 SELECT name,year,rankscore FROM movies WHERE rankscore IS NOT NULL LIMIT 20; 
 *********************************************************************************************************************************************************************************
-#LOGICAL OPERATIONS ON WHERE CLAUSE QUERIES 
+# LOGICAL OPERATIONS ON WHERE CLAUSE QUERIES 
 SELECT name,year,rankscore FROM movies WHERE year>=1999 AND year<=2000; // AND 
 SELECT name,year,rankscore FROM movies WHERE NOT year<=2000;  // NOT
 SELECT name,year FROM movies WHERE rankscore>9 OR year>=2000;  // OR 
@@ -34,16 +34,21 @@ SELECT name,year,rankscore FROM movies WHERE year BETWEEN year>=1999 AND year<=2
 SELECT director_id,genre FROM directors_genres WHERE genre IN('Comedy','Horror'); // IN 
 SELECT name,year,rankscore FROM movies WHERE name LIKE 'Tis%'; // like , %-Wildcard character 
 **********************************************************************************************************************************************************************************
-#AGGREGATE FUNCTIONS
+# AGGREGATE FUNCTIONS
 SELECT year, COUNT(year) FROM movies; 
 SELECT year, COUNT(year) FROM movies WHERE year>=2000; 
 SELECT year, MIN(year) FROM movies; 
 SELECT year, MAX(year) FROM movies; 
 **********************************************************************************************************************************************************************************
-#GROUP BY 
+# GROUP BY 
 SELECT year, COUNT(year) FROM movies GROUP BY year; 
 SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year; 
 SELECT YEAR, COUNT(year) year_count FROM movies GROUP BY year ORDER BY year_count; 
-
-
+******************************************************************************************************************************************************************************
+# HAVING CLAUSE 
+SELECT year, COUNT(year) year_count FROM movies GROUP BY year HAVING year_count>1000; 
+SELECT year, COUNT(year) year_count FROM movies WHERE rankscore>9 GROUP BY year HAVING year_count>1000; 
+*******************************************************************************************************************************************************************************
+# JOIN 
+SELECT m.name, g.genre FROM movies m JOIN movies_genres g ON m.id=g.movie_id LIMIT 20;  
 
