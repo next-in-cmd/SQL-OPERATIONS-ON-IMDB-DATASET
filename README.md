@@ -49,7 +49,7 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                     SELECT name,year,rankscore FROM movies WHERE year BETWEEN year>=1999 AND year<=2000; // BETWEEN 
                     SELECT director_id,genre FROM directors_genres WHERE genre IN('Comedy','Horror'); // IN 
                     SELECT name,year,rankscore FROM movies WHERE name LIKE 'Tis%'; // like , %-Wildcard character  
- **AGGREGATE FUNCTIONS:**
+ **AGGREGATE FUNCTIONS:**  aggregate function is a function that performs a calculation on a set of values and returns a single summary value.
 
                     SELECT year, COUNT(year) FROM movies; 
                     SELECT year, COUNT(year) FROM movies WHERE year>=2000; 
@@ -57,7 +57,7 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                     SELECT year, MAX(year) FROM movies; 
 
 
- **GROUP BY:** 
+ **GROUP BY:**  the GROUP BY clause is used to group rows that have the same values in specified columns into summary rows, like aggregating data. It is often used with aggregate functions (SUM(), COUNT(), AVG(), MIN(), MAX()) to perform operations on each group of rows.
 
                    SELECT year, COUNT(year) FROM movies GROUP BY year; 
                    SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year; 
