@@ -63,7 +63,7 @@ TO work with NULL operations Keywords[IS NULL/IS NOT NULL] are used.
                    SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year; 
                    SELECT YEAR, COUNT(year) year_count FROM movies GROUP BY year ORDER BY year_count; 
 
-**HAVING CLAUSE:**The HAVING clause in SQL is used to filter the results of a GROUP BY operation based on aggregate functions. Unlike the WHERE clause, which filters rows before any grouping takes place, the HAVING clause filters groups after the aggregation has been performed.
+**HAVING CLAUSE:** The HAVING clause in SQL is used to filter the results of a GROUP BY operation based on aggregate functions. Unlike the WHERE clause, which filters rows before any grouping takes place, the HAVING clause filters groups after the aggregation has been performed.
 
                   SELECT year, COUNT(year) year_count FROM movies GROUP BY year HAVING year_count>1000; 
                   SELECT year, COUNT(year) year_count FROM movies WHERE rankscore>9 GROUP BY year HAVING year_count>1000; 
